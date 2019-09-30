@@ -66,7 +66,7 @@ Class CommentHandler {
      * This function accepts the data directly from the user input of the comment form.
      *
      * @param $comment
-     * @return string
+     * @return string or array
      */
     public function addComment($comment) {
         $db = new mysql('testserver', 'testuser', 'testpassword');
