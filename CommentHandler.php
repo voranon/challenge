@@ -26,6 +26,13 @@
  *
  */
 Class CommentHandler {
+    /**
+     * getComments
+     *
+     * This function should return a structured array of all comments and replies
+     *
+     * @return array
+     */
     public function getComments() {
         $db = new mysql('testserver', 'testuser', 'testpassword');
         $sql = "SELECT * FROM comments_table where parent_id=0 ORDER BY create_date DESC;";
@@ -53,6 +60,14 @@ Class CommentHandler {
         return $comments;
     }
 
+    /**
+     * addComment
+     *
+     * This function accepts the data directly from the user input of the comment form.
+     *
+     * @param $comment
+     * @return string
+     */
     public function addComment($comment) {
         $db = new mysql('testserver', 'testuser', 'testpassword');
         $sql = "INSERT INTO comments_table (parent_id, name, comment, create_date) VALUES (" . $comment['parent_id'] . ", " . $comment['name'] . ", " . $comment['comment'] . ", NOW())";
