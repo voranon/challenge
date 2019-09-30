@@ -11,7 +11,9 @@
  * Instructions:
  *
  * The following is a poorly written comment handler your task will be to refactor
- * the code to improve its structure, performance, and security.
+ * the code to improve its structure, performance, and security. Make any changes
+ * you feel necessary to improve the code. The code doesn't need to be runnable
+ * we just want to see your structure, style and approach.
  *
  *
  * Data Structure:
