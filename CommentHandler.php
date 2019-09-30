@@ -10,7 +10,7 @@
  *
  * Instructions:
  *
- * The following is a poorly written comment handler your task will be to refactor
+ * The following is a poorly written comment handler. Your task will be to refactor
  * the code to improve its structure, performance, and security with respect to the
  * above requirements. Make any changes you feel necessary to improve the code or
  * data structure. The code doesn't need to be runnable we just want to see your
