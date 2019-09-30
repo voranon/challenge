@@ -1,6 +1,6 @@
 <?php
 /**
- * Comment Handler
+ * Comment Handler Requirements
  * - Users can write a comment
  * - Users can write a reply to a comment
  * - Users can reply to a reply (Maximum of 2 levels in nested comments)
@@ -11,15 +11,16 @@
  * Instructions:
  *
  * The following is a poorly written comment handler your task will be to refactor
- * the code to improve its structure, performance, and security. Make any changes
- * you feel necessary to improve the code. The code doesn't need to be runnable
- * we just want to see your structure, style and approach.
+ * the code to improve its structure, performance, and security with respect to the
+ * above requirements. Make any changes you feel necessary to improve the code or
+ * data structure. The code doesn't need to be runnable we just want to see your
+ * structure, style and approach.
  *
  *
  * Data Structure:
  * comments_table
  * -id
- * -parent_id
+ * -parent_id (0 - designates top level comment)
  * -name
  * -comment
  * -create_date
@@ -63,7 +64,7 @@ Class CommentHandler {
     /**
      * addComment
      *
-     * This function accepts the data directly from the user input of the comment form.
+     * This function accepts the data directly from the user input of the comment form and creates the comment entry in the database.
      *
      * @param $comment
      * @return string or array
