@@ -1,6 +1,10 @@
 /*
-Application requires two level deep commenting system. There will be an author and comments belong to the author.
-Please write create statements for tables accordingly and write query to be run on application to pull all the comments sorted by created date with their replies.
+Application requires threaded commenting system. There will be an author and comments belong to the author.
+Please write create statements for tables accordingly and write query to be run on application that will return :
+- All the comments sorted by created date
+- Replies to those comments
+- first_name of the author for each comment
+- Created date of every comment
 Keep in mind the best performance.
 You can add/edit columns to the tables or create additional tables if necessary.
 Consider adding foreign key constraints, indices etc.
@@ -19,5 +23,5 @@ CREATE TABLE `comment` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2046711 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 /* QUERY */
-SELECT * FROM comments JOIN author;
+SELECT * FROM comments;
 
