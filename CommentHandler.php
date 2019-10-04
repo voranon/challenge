@@ -8,6 +8,9 @@
  * data structure. The code doesn't need to be runnable we just want to see your
  * structure, style and approach.
  *
+ * If you are unfamiliar with PHP, it is acceptable to recreate this functionality
+ * in the language of your choice. 
+ *
  * Comment Handler Requirements
  * - Users can write a comment
  * - Users can write a reply to a comment
