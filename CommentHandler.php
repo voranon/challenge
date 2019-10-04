@@ -9,7 +9,7 @@
  * structure, style and approach.
  *
  * If you are unfamiliar with PHP, it is acceptable to recreate this functionality
- * in the language of your choice. 
+ * in the language of your choice. However, PHP is preferred.
  *
  * Comment Handler Requirements
  * - Users can write a comment
