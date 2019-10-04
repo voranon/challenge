@@ -1,21 +1,19 @@
 <?php
 /**
+ * Instructions:
+ *
+ * The following is a poorly written comment handler. Your task will be to refactor
+ * the code to improve its structure, performance, and security with respect to the
+ * below requirements. Make any changes you feel necessary to improve the code or
+ * data structure. The code doesn't need to be runnable we just want to see your
+ * structure, style and approach.
+ *
  * Comment Handler Requirements
  * - Users can write a comment
  * - Users can write a reply to a comment
  * - Users can reply to a reply (Maximum of 2 levels in nested comments)
  * - Comments (within in the same level) should be ordered by post date
- * - Should filter out malicious text that could result in a security vulnerability
- *
- *
- * Instructions:
- *
- * The following is a poorly written comment handler. Your task will be to refactor
- * the code to improve its structure, performance, and security with respect to the
- * above requirements. Make any changes you feel necessary to improve the code or
- * data structure. The code doesn't need to be runnable we just want to see your
- * structure, style and approach.
- *
+ * - Address any data security vulnerabilities
  *
  * Data Structure:
  * comments_table
