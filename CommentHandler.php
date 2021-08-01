@@ -35,8 +35,25 @@ Class CommentHandler {
      *
      * @return array
      */
+    private $_db;
+    private $_dns      = 'testserver';
+    private $_user     = 'testuser';
+    private $_password = 'testpassword';
+    
+    public function __construct(){
+ 		
+        try
+        {
+            $this->_db = new mysql($this->_dns, $this->_user, $this->_password);
+        }
+        catch(Exception $e)
+        {
+            echo $e->getMessage();
+        }
+ 	}
+    
     public function getComments() {
-        $db = new mysql('testserver', 'testuser', 'testpassword');
+        
         $sql = "
         SELECT  ct1.*,ct2.*,ct3.*,
                 ct1.id as ct1_comment,
@@ -47,9 +64,9 @@ Class CommentHandler {
         LEFT JOIN comments_table as ct3 ON ct2.parent_id = ct3.parent_id
         where ct1.parent_id=0
         ORDER BY ct1.create_date DESC;";
-
+        // prevent SQL injection
         $sql = $db->prepare($sql);
-        $result = mysql_query($sql, $db);
+        $result = mysql_query($sql, $this->_db);
         $wrapper = [];
         $comments = [];
         while ($row = mysql_fetch_assoc($result)) {
@@ -81,9 +98,11 @@ Class CommentHandler {
      * @return string or array
      */
     public function addComment($comment) {
-        $db = new mysql('testserver', 'testuser', 'testpassword');
+       
         $sql = "INSERT INTO comments_table (parent_id, name, comment, create_date) VALUES (" . $comment['parent_id'] . ", " . $comment['name'] . ", " . $comment['comment'] . ", NOW())";
-        $result = mysql_query($sql, $db);
+         // prevent SQL injection
+        $sql = $db->prepare($sql);
+        $result = mysql_query($sql, $this->_db);
         if($result) {
             return $comment;
         } else {
