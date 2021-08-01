@@ -50,7 +50,7 @@ class Form {
             resolve(() => {return true});
         }
         else {
-            reject( alert(output.errors) );
+            reject( alert('Sorry please submit this form at a later time') );
         }
             
         });
